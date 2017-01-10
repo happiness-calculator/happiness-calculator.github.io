@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Happiness Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>    
+    <div class="container">
+        <header>
+            <!--Header Bar-->
+            <div class="pull-left">Happiness Calculator</div>
+            <div class="pull-right">A place to test how happy you are :)</div>
+        </header>
+        
+        <main>
+            <form class="question" id="q1" data-question="1"> <!--Question 1-->
+                <h3>Q1: How much physical activity do you get per day?</h3>
+                <ul>
+                    <li><input type="radio" name="q1" value="a">A. Less than an hour</li>
+                    <li><input type="radio" name="q1" value="b">B. 1 Hour</li>
+                    <li><input type="radio" name="q1" value="c">C. 2 Hours</li>
+                    <li><input type="radio" name="q1" value="d">D. 3+ Hours</li>
+                </ul>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+            
+            <form class="question" id="q2" data-question="2"> <!--Question 2-->
+                <h3>Q2: How much music do you listen to in a day?</h3>
+                <ul>
+                    <li><input type="radio" name="q2" value="a">A. Less than one hour</li>
+                    <li><input type="radio" name="q2" value="b">B. 1-2 Hours</li>
+                    <li><input type="radio" name="q2" value="c">C. 3-4 Hours</li>
+                    <li><input type="radio" name="q2" value="d">D. 5+ Hours</li>
+                </ul>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+            
+            <form class="question" id="q3" data-question="3"> <!--Question 3-->
+                <h3>Q3: How many friends do you have?</h3>
+                <ul>
+                    <li><input type="radio" name="q3" value="a">A. I have none</li>
+                    <li><input type="radio" name="q3" value="b">B. 1-3 Friends</li>
+                    <li><input type="radio" name="q3" value="c">C. 4-5 Friends</li>
+                    <li><input type="radio" name="q3" value="d">D. 6+ Friends</li>
+                </ul>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+            
+            <form class="question" id="q4" data-question="4"> <!--Question 4-->
+                <h3>Q4: About how many times do you laugh a day?</h3>
+                <ul>
+                    <li><input type="radio" name="q4" value="a">A. Less than 5 Times</li>
+                    <li><input type="radio" name="q4" value="b">B. 5-10 Times</li>
+                    <li><input type="radio" name="q4" value="c">C. 11-12 Times</li>
+                    <li><input type="radio" name="q4" value="d">D. 12+ Times</li>
+                </ul>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+            <form class="question" id="q5" data-question="5"> <!--Question 5-->
+                <h3>Q5: How long do you stay outside per day on average?</h3>
+                <ul>
+                    <li><input type="radio" name="q5" value="a">A. Less than one hour</li>
+                    <li><input type="radio" name="q5" value="b">B. 1-2 Hours</li>
+                    <li><input type="radio" name="q5" value="c">C. 3-4 Hours</li>
+                    <li><input type="radio" name="q5" value="d">D. 5+ Hours</li>
+                </ul>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+            
+            
+            <div id="result"></div> <!--Results of the Happiness Calculator-->
+        </main>
+        
+        <footer>
+            <div class="pull-left">5 Questions</div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script> <!--JQuery-->
+    <script src="js/quiz.js"></script> <!--Script for the questions-->
+</body>
+</html>

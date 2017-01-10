@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.6m;
+    background-color: rgb(106,126,133);
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+@keyframes heading {
+    0% {background-color: aqua;}
+    50% {background-color: forestgreen;}
+    100% {background-color: crimson;}
+}
+
+header {
+    animation-name: heading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    color: #ffffff;
+    padding: 15px 10px;
+    overflow: auto;
+    font-size: 25px;
+    text-shadow: 2px 2px black;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+footer {
+    animation-name: heading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    color: #ffffff;
+    padding: 15px 10px;
+    overflow: auto;
+    text-shadow: 2px 2px black;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+main {
+    color: white;
+    background: #000080;
+    padding: 15px 10px;
+    overflow: auto;
+    text-shadow: 2px 2px black;
+    border: 5px solid black;
+    border-radius: 25px;
+    margin: 10px 0px;
+}
+a {
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    .container{
+        width: 90%;
+    }
+}
