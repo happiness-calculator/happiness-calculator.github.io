@@ -1,7 +1,7 @@
 var joyLevel = 0;
 var questionNumber = 5;
 var pointsPerBestAnswer = 1;
-var maxJoy = 15;
+var maxJoy = 21;
 var happinessPercent = joyLevel / maxJoy * 100;
 
 // Initializes
@@ -54,6 +54,20 @@ $(document).ready(function(){
     $('#q5 #submit').click(function() {
         $('.question').hide(); 
         answer('q5');
+        $('#q6').fadeIn(500);
+        return false;
+    });
+    
+    $('#q6 #submit').click(function() {
+        $('.question').hide(); 
+        answer('q6');
+        $('#q7').fadeIn(500);
+        return false;
+    });
+    
+    $('#q7 #submit').click(function() {
+        $('.question').hide(); 
+        answer('q7');
         $('#result').fadeIn(500);
         return false;
     });
@@ -111,6 +125,28 @@ function answer(question) {
         } else if (submitted == "d") {
             joyLevel = joyLevel+ 3;
         }
+    }
+    if (question == "q6") { // Question 6
+        var submitted = $('input[name=q6]:checked').val();
+        if (submitted == "b") {
+            joyLevel += 3;
+        } else if (submitted == "c") {
+            joyLevel = joyLevel + 2;
+        } else if (submitted == "a") {
+            joyLevel = joyLevel+ 1;
+        }
+    }
+    if (question == "q7") { // Question 7
+        var submitted = $('input[name=q7]:checked').val();
+        if (submitted == "b") {
+            joyLevel++;
+        } else if (submitted == "c") {
+            joyLevel = joyLevel + 3;
+        } else if (submitted == "d") {
+            joyLevel = joyLevel+ 2;
+        }
+    
+    
         var happinessPercent = Math.round(joyLevel / maxJoy * 100);
         if (happinessPercent <= 25) {
             $('#result').html('<h3>Your Happiness Level is: '+ happinessPercent +'%</h3><br>You are are just and overall very unhappy person. <br><a href="happiness-calculator.html">Click Here to Take The Test Again!</a>');
