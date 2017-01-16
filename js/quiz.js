@@ -1,7 +1,7 @@
 var joyLevel = 0;
-var questionNumber = 5;
+var questionNumber = 10;
 var pointsPerBestAnswer = 1;
-var maxJoy = 21;
+var maxJoy = 30;
 var happinessPercent = joyLevel / maxJoy * 100;
 
 // Initializes
@@ -68,6 +68,27 @@ $(document).ready(function(){
     $('#q7 #submit').click(function() {
         $('.question').hide(); 
         answer('q7');
+        $('#q8').fadeIn(500);
+        return false;
+    });
+    
+    $('#q8 #submit').click(function() {
+        $('.question').hide(); 
+        answer('q8');
+        $('#q9').fadeIn(500);
+        return false;
+    });
+    
+    $('#q9 #submit').click(function() {
+        $('.question').hide(); 
+        answer('q9');
+        $('#q10').fadeIn(500);
+        return false;
+    });
+    
+    $('#q10 #submit').click(function() {
+        $('.question').hide(); 
+        answer('q10');
         $('#result').fadeIn(500);
         return false;
     });
@@ -145,7 +166,35 @@ function answer(question) {
         } else if (submitted == "d") {
             joyLevel = joyLevel+ 2;
         }
+    }
     
+    if (question == "q8") { // Question 8
+        var submitted = $('input[name=q8]:checked').val();
+        if (submitted == "a") {
+            joyLevel++;
+        } else if (submitted == "b") {
+            joyLevel = joyLevel + 3;
+        }
+    }
+    
+    if (question == "q9") { // Question 9
+        var submitted = $('input[name=q9]:checked').val();
+        if (submitted == "b") {
+            joyLevel += 3;
+        } else if (submitted == "a") {
+            joyLevel = joyLevel + 2;
+        } else if (submitted == "d") {
+            joyLevel = joyLevel+ 2;
+        }
+    }
+    
+    if (question == "q10") { // Question 10
+        var submitted = $('input[name=q10]:checked').val();
+        if (submitted == "b") {
+            joyLevel++;
+        } else if (submitted == "c") {
+            joyLevel = joyLevel + 3;
+        } 
     
         var happinessPercent = Math.round(joyLevel / maxJoy * 100);
         if (happinessPercent <= 25) {
